@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public static class AudioConstants {
     public const int SAMPLE_RATE = 48000;
