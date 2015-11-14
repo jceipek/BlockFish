@@ -14,6 +14,5 @@ public class FollowPath : MonoBehaviour {
         var pos = _path.SplinePositionForSample(_path.CurrentSample - _sampleOffset);
         var rot = _path.SplineDirectionForSample(_path.CurrentSample - _sampleOffset);
         transform.position = new Vector3(pos.x,pos.y,transform.position.z);
-        transform.rotation = Quaternion.LookRotation(Vector3.Cross(rot, Vector3.up));
 	}
 }
