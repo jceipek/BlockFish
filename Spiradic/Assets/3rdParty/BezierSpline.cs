@@ -174,6 +174,42 @@ public class BezierSpline : MonoBehaviour {
         }
     }
 
+
+
+
+    // public void AddCurveAtIndex (int index) {
+    //     Array.Resize(ref points, points.Length + 3);
+    //     for (int i = points.Length-1; i < index * 3 + 3; i--) {
+    //         points[i] = points[i-3];
+    //     }
+
+
+
+    //     for (int i = index * 3; i < index * 3 + 3; i++) {
+    //         points[i] =
+    //     }
+
+
+    //     Vector2 point = points[points.Length - 1];
+    //     Array.Resize(ref points, points.Length + 3);
+    //     point.x += 1f;
+    //     points[points.Length - 3] = point;
+    //     point.x += 1f;
+    //     points[points.Length - 2] = point;
+    //     point.x += 1f;
+    //     points[points.Length - 1] = point;
+
+    //     Array.Resize(ref modes, modes.Length + 1);
+    //     modes[modes.Length - 1] = modes[modes.Length - 2];
+    //     EnforceMode(points.Length - 4);
+
+    //     if (loop) {
+    //         points[points.Length - 1] = points[0];
+    //         modes[modes.Length - 1] = modes[0];
+    //         EnforceMode(0);
+    //     }
+    // }
+
     public void Reset () {
         points = new Vector2[]
         {
