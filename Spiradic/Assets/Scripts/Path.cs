@@ -67,6 +67,16 @@ public class Path : MonoBehaviour {
         return _audioSource.clip.samples + 1; // Never swap if no more obstacles
     }
 
+    public Obstacle ObstacleAtIndex (int obstacleIndex) {
+        return _obstacles[obstacleIndex];
+    }
+
+    public int ObstacleCount {
+        get {
+            return _obstacles.Length;
+        }
+    }
+
     public int CurrentSample {
         get {
             return _audioSource.timeSamples;

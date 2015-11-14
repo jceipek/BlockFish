@@ -12,7 +12,6 @@ public class FollowPath : MonoBehaviour {
 
 	void Update () {
         var pos = _path.SplinePositionForSample(_path.CurrentSample - _sampleOffset);
-        var rot = _path.SplineDirectionForSample(_path.CurrentSample - _sampleOffset);
         transform.position = new Vector3(pos.x,pos.y,transform.position.z);
 	}
 }
