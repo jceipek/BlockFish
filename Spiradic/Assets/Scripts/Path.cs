@@ -16,6 +16,11 @@ public struct Obstacle {
     public int StartSample;
     public int StopSample;
     public GameLayer Layer;
+    public Obstacle (int startSample, int stopSample, GameLayer layer) {
+        StartSample = startSample;
+        StopSample = stopSample;
+        Layer = layer;
+    }
 }
 
 [System.Serializable]

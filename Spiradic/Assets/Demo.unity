@@ -1636,3 +1636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72856ec817d20446a9617b72b9b5aeaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _keyA: 97
+  _keyB: 108
+  _sampleOffset: 31002
+  _obstacles: []
