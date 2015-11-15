@@ -24,4 +24,13 @@ public class BeatRecorder : MonoBehaviour {
             _obstacles.Add(new Obstacle(_path.CurrentSample, _path.CurrentSample+_sampleOffset, GameLayer.B));
         }
 	}
+
+	[SerializeField] bool _doSet = false;
+	void OnValidate () {
+		if (_doSet) {
+			_path = FindObjectOfType<Path>();
+			_path.SetObstaclesToList(_obstacles);
+			_doSet = false;
+		}
+	}
 }

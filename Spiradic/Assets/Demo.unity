@@ -898,7 +898,7 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 267939567}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
@@ -2499,16 +2499,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obstacles:
-  - StartSample: 44100
-    StopSample: 66150
+  - StartSample: 167157
+    StopSample: 198222
     Layer: 0
-  - StartSample: 132300
-    StopSample: 154350
+  - StartSample: 305643
+    StopSample: 336708
     Layer: 1
-  - StartSample: 198450
-    StopSample: 242550
-    Layer: 0
-  _startSample: 6922080
+  _startSample: 0
   _spline: {fileID: 267939568}
   _prePathSamples: 0
   _cheatAdvanceSamplesRange:
@@ -4107,6 +4104,7 @@ MonoBehaviour:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+  _mainMaterials: []
 --- !u!4 &1300289050
 Transform:
   m_ObjectHideFlags: 0
@@ -4415,7 +4413,14 @@ MonoBehaviour:
   _keyA: 97
   _keyB: 108
   _sampleOffset: 31065
-  _obstacles: []
+  _obstacles:
+  - StartSample: 167157
+    StopSample: 198222
+    Layer: 0
+  - StartSample: 305643
+    StopSample: 336708
+    Layer: 1
+  _doSet: 0
 --- !u!1001 &1497165587
 Prefab:
   m_ObjectHideFlags: 0
@@ -4941,7 +4946,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 04b8043b297744187933746bad91ebdb, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 04b8043b297744187933746bad91ebdb, type: 3}
       propertyPath: m_LocalScale.x
