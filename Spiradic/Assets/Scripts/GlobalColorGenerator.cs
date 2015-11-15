@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class GlobalColorGenerator : MonoBehaviour {
 
@@ -8,6 +7,7 @@ public class GlobalColorGenerator : MonoBehaviour {
     [SerializeField] Color[] _startColors = new Color[2];
     [SerializeField] FMinMax _saturationRange = new FMinMax(0.1f, 1f);
     [SerializeField] AnimationCurve _saturationCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
+    [SerializeField] Material[] _mainMaterials;
 
     Path _path;
     void Awake () {
@@ -20,5 +20,9 @@ public class GlobalColorGenerator : MonoBehaviour {
         var color = HSBColor.FromColor(_startColors[(int)layer]);
         color.s = sat;
         return color.ToColor();
+    }
+
+    public Material GetMaterial (GameLayer layer) {
+        return _mainMaterials[(int)layer];
     }
 }
