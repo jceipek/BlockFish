@@ -47,7 +47,7 @@ public struct FMinMax {
 [System.Serializable]
 public struct TimeMap {
     [SerializeField, TimeSample] public int TimeSample;
-    public float CurveFrac;
+    [SerializeField, Range(0f,1f)] public float CurveFrac;
 }
 
 public class Path : MonoBehaviour {
@@ -97,26 +97,26 @@ public class Path : MonoBehaviour {
         }
     }
 
-    public Vector2 SplinePositionForSample (int sample) {
+    float FracForSample (int sample, bool logme = false) {
         float frac = (sample+_prePathSamples)/(float)(_audioSource.clip.samples+_prePathSamples);
         for (int i = 0; i < _timeMap.Length-1; i++) {
             if (sample >= _timeMap[i].TimeSample && sample <= _timeMap[i+1].TimeSample) {
                 frac = MathHelpers.LinMap(_timeMap[i].TimeSample, _timeMap[i+1].TimeSample, _timeMap[i].CurveFrac, _timeMap[i+1].CurveFrac, sample);
+                if (logme) {
+                    Debug.Log(frac);
+                }
                 break;
             }
         }
-        return _spline.GetPoint(frac);
+        return frac;
+    }
+
+    public Vector2 SplinePositionForSample (int sample) {
+        return _spline.GetPoint(FracForSample(sample));
     }
 
     public Vector2 SplineDirectionForSample (int sample) {
-        float frac = (sample+_prePathSamples)/(float)(_audioSource.clip.samples+_prePathSamples);
-        for (int i = 0; i < _timeMap.Length-1; i++) {
-            if (sample >= _timeMap[i].TimeSample && sample <= _timeMap[i+1].TimeSample) {
-                frac = MathHelpers.LinMap(_timeMap[i].TimeSample, _timeMap[i+1].TimeSample, _timeMap[i].CurveFrac, _timeMap[i+1].CurveFrac, sample);
-                break;
-            }
-        }
-        return _spline.GetDirection(frac);
+        return _spline.GetDirection(FracForSample(sample));
     }
 
     public void SetObstaclesToList (List<Obstacle> obstacles) {
@@ -137,10 +137,16 @@ public class Path : MonoBehaviour {
         _audioSource.Play();
 	}
 
+    int _lastSample;
     void Update () {
         // Debug.Log("HEY:");
         // Debug.Log(_audioSource.time);
         // Debug.Log(_audioSource.timeSamples/(float)AudioConstants.SAMPLE_RATE);
+        if (_lastSample > CurrentSample) {
+            Debug.Log(FracForSample(_lastSample));
+            Debug.Log(FracForSample(CurrentSample));
+        }
+        _lastSample = CurrentSample;
         while (_currentObstacleIndex <= _obstacles.Length-1 && _obstacles[_currentObstacleIndex].StopSample < CurrentSample) {
             _currentObstacleIndex++;
         }
