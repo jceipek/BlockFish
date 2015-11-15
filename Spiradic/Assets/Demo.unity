@@ -1416,35 +1416,35 @@ MonoBehaviour:
   - StartSample: 198450
     StopSample: 242550
     Layer: 0
-  _startSample: 904320
+  _startSample: 7800000
   _spline: {fileID: 267939568}
   _prePathSamples: 0
   _cheatAdvanceSamplesRange:
     Min: 7675
     Max: 11025
   _timeMap:
-  - TimeSample: 1162079
-    CurveFrac: .100000001
-  - TimeSample: 1689119
-    CurveFrac: .170000002
   - TimeSample: 0
     CurveFrac: 0
-  - TimeSample: 0
-    CurveFrac: 0
-  - TimeSample: 10598433
-    CurveFrac: 1
-  - TimeSample: 10598433
-    CurveFrac: 1
-  - TimeSample: 10598433
-    CurveFrac: 1
-  - TimeSample: 10598433
-    CurveFrac: 1
-  - TimeSample: 10598433
-    CurveFrac: 1
-  - TimeSample: 10598433
-    CurveFrac: 1
-  - TimeSample: 10598433
-    CurveFrac: 1
+  - TimeSample: 1389600
+    CurveFrac: .107000001
+  - TimeSample: 1680000
+    CurveFrac: .150999993
+  - TimeSample: 1994880
+    CurveFrac: .192000002
+  - TimeSample: 2304000
+    CurveFrac: .252999991
+  - TimeSample: 3230400
+    CurveFrac: .328999996
+  - TimeSample: 4722239
+    CurveFrac: .465999991
+  - TimeSample: 5173920
+    CurveFrac: .486000001
+  - TimeSample: 6308159
+    CurveFrac: .561999977
+  - TimeSample: 7932960
+    CurveFrac: .712000012
+  - TimeSample: 9383520
+    CurveFrac: .944999993
   - TimeSample: 10598433
     CurveFrac: 1
   - TimeSample: 10598433
