@@ -2499,12 +2499,339 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obstacles:
-  - StartSample: 167157
-    StopSample: 198222
+  - StartSample: 206848
+    StopSample: 237913
     Layer: 0
-  - StartSample: 305643
-    StopSample: 336708
-    Layer: 1
+  - StartSample: 302592
+    StopSample: 333657
+    Layer: 0
+  - StartSample: 509440
+    StopSample: 540505
+    Layer: 0
+  - StartSample: 735744
+    StopSample: 766809
+    Layer: 0
+  - StartSample: 881152
+    StopSample: 912217
+    Layer: 0
+  - StartSample: 1070592
+    StopSample: 1101657
+    Layer: 0
+  - StartSample: 1329664
+    StopSample: 1360729
+    Layer: 0
+  - StartSample: 1435648
+    StopSample: 1466713
+    Layer: 0
+  - StartSample: 1456128
+    StopSample: 1487193
+    Layer: 0
+  - StartSample: 1528832
+    StopSample: 1559897
+    Layer: 0
+  - StartSample: 1577472
+    StopSample: 1608537
+    Layer: 0
+  - StartSample: 1599488
+    StopSample: 1630553
+    Layer: 0
+  - StartSample: 1625600
+    StopSample: 1656665
+    Layer: 0
+  - StartSample: 1688064
+    StopSample: 1719129
+    Layer: 0
+  - StartSample: 1890816
+    StopSample: 1921881
+    Layer: 0
+  - StartSample: 1915904
+    StopSample: 1946969
+    Layer: 0
+  - StartSample: 1945088
+    StopSample: 1976153
+    Layer: 0
+  - StartSample: 2072576
+    StopSample: 2103641
+    Layer: 0
+  - StartSample: 2097152
+    StopSample: 2128217
+    Layer: 0
+  - StartSample: 2132992
+    StopSample: 2164057
+    Layer: 0
+  - StartSample: 2181120
+    StopSample: 2212185
+    Layer: 0
+  - StartSample: 2201088
+    StopSample: 2232153
+    Layer: 0
+  - StartSample: 2301440
+    StopSample: 2332505
+    Layer: 0
+  - StartSample: 2343936
+    StopSample: 2375001
+    Layer: 0
+  - StartSample: 2358784
+    StopSample: 2389849
+    Layer: 0
+  - StartSample: 2373120
+    StopSample: 2404185
+    Layer: 0
+  - StartSample: 2387968
+    StopSample: 2419033
+    Layer: 0
+  - StartSample: 3028992
+    StopSample: 3060057
+    Layer: 0
+  - StartSample: 3263488
+    StopSample: 3294553
+    Layer: 0
+  - StartSample: 3643392
+    StopSample: 3674457
+    Layer: 0
+  - StartSample: 3708416
+    StopSample: 3739481
+    Layer: 0
+  - StartSample: 4173824
+    StopSample: 4204889
+    Layer: 0
+  - StartSample: 4812288
+    StopSample: 4843353
+    Layer: 0
+  - StartSample: 4869632
+    StopSample: 4900697
+    Layer: 0
+  - StartSample: 4900352
+    StopSample: 4931417
+    Layer: 0
+  - StartSample: 4933120
+    StopSample: 4964185
+    Layer: 0
+  - StartSample: 4978688
+    StopSample: 5009753
+    Layer: 0
+  - StartSample: 5005824
+    StopSample: 5036889
+    Layer: 0
+  - StartSample: 5029376
+    StopSample: 5060441
+    Layer: 0
+  - StartSample: 5115904
+    StopSample: 5146969
+    Layer: 0
+  - StartSample: 5209600
+    StopSample: 5240665
+    Layer: 0
+  - StartSample: 5235200
+    StopSample: 5266265
+    Layer: 0
+  - StartSample: 5259264
+    StopSample: 5290329
+    Layer: 0
+  - StartSample: 5298688
+    StopSample: 5329753
+    Layer: 0
+  - StartSample: 5474816
+    StopSample: 5505881
+    Layer: 0
+  - StartSample: 5513216
+    StopSample: 5544281
+    Layer: 0
+  - StartSample: 5610496
+    StopSample: 5641561
+    Layer: 0
+  - StartSample: 5636096
+    StopSample: 5667161
+    Layer: 0
+  - StartSample: 5655552
+    StopSample: 5686617
+    Layer: 0
+  - StartSample: 5675520
+    StopSample: 5706585
+    Layer: 0
+  - StartSample: 5724160
+    StopSample: 5755225
+    Layer: 0
+  - StartSample: 6113792
+    StopSample: 6144857
+    Layer: 0
+  - StartSample: 6152192
+    StopSample: 6183257
+    Layer: 0
+  - StartSample: 6590976
+    StopSample: 6622041
+    Layer: 0
+  - StartSample: 6643200
+    StopSample: 6674265
+    Layer: 0
+  - StartSample: 7407104
+    StopSample: 7438169
+    Layer: 0
+  - StartSample: 7550976
+    StopSample: 7582041
+    Layer: 0
+  - StartSample: 7802880
+    StopSample: 7833945
+    Layer: 0
+  - StartSample: 7833088
+    StopSample: 7864153
+    Layer: 0
+  - StartSample: 7979520
+    StopSample: 8010585
+    Layer: 0
+  - StartSample: 8021504
+    StopSample: 8052569
+    Layer: 0
+  - StartSample: 8088064
+    StopSample: 8119129
+    Layer: 0
+  - StartSample: 8112640
+    StopSample: 8143705
+    Layer: 0
+  - StartSample: 8157696
+    StopSample: 8188761
+    Layer: 0
+  - StartSample: 8186368
+    StopSample: 8217433
+    Layer: 0
+  - StartSample: 8213504
+    StopSample: 8244569
+    Layer: 0
+  - StartSample: 8231424
+    StopSample: 8262489
+    Layer: 0
+  - StartSample: 8248320
+    StopSample: 8279385
+    Layer: 0
+  - StartSample: 8264192
+    StopSample: 8295257
+    Layer: 0
+  - StartSample: 8287744
+    StopSample: 8318809
+    Layer: 0
+  - StartSample: 8313344
+    StopSample: 8344409
+    Layer: 0
+  - StartSample: 8336896
+    StopSample: 8367961
+    Layer: 0
+  - StartSample: 8359936
+    StopSample: 8391001
+    Layer: 0
+  - StartSample: 8386048
+    StopSample: 8417113
+    Layer: 0
+  - StartSample: 8439808
+    StopSample: 8470873
+    Layer: 0
+  - StartSample: 8462336
+    StopSample: 8493401
+    Layer: 0
+  - StartSample: 8482816
+    StopSample: 8513881
+    Layer: 0
+  - StartSample: 8515072
+    StopSample: 8546137
+    Layer: 0
+  - StartSample: 8656896
+    StopSample: 8687961
+    Layer: 0
+  - StartSample: 8676352
+    StopSample: 8707417
+    Layer: 0
+  - StartSample: 8738816
+    StopSample: 8769881
+    Layer: 0
+  - StartSample: 8843776
+    StopSample: 8874841
+    Layer: 0
+  - StartSample: 8884736
+    StopSample: 8915801
+    Layer: 0
+  - StartSample: 8933376
+    StopSample: 8964441
+    Layer: 0
+  - StartSample: 8967168
+    StopSample: 8998233
+    Layer: 0
+  - StartSample: 9027072
+    StopSample: 9058137
+    Layer: 0
+  - StartSample: 9044480
+    StopSample: 9075545
+    Layer: 0
+  - StartSample: 9064960
+    StopSample: 9096025
+    Layer: 0
+  - StartSample: 9084416
+    StopSample: 9115481
+    Layer: 0
+  - StartSample: 9104384
+    StopSample: 9135449
+    Layer: 0
+  - StartSample: 9122304
+    StopSample: 9153369
+    Layer: 0
+  - StartSample: 9141248
+    StopSample: 9172313
+    Layer: 0
+  - StartSample: 9163264
+    StopSample: 9194329
+    Layer: 0
+  - StartSample: 9184768
+    StopSample: 9215833
+    Layer: 0
+  - StartSample: 9203712
+    StopSample: 9234777
+    Layer: 0
+  - StartSample: 9222656
+    StopSample: 9253721
+    Layer: 0
+  - StartSample: 9238528
+    StopSample: 9269593
+    Layer: 0
+  - StartSample: 9264128
+    StopSample: 9295193
+    Layer: 0
+  - StartSample: 9283584
+    StopSample: 9314649
+    Layer: 0
+  - StartSample: 9303552
+    StopSample: 9334617
+    Layer: 0
+  - StartSample: 9326080
+    StopSample: 9357145
+    Layer: 0
+  - StartSample: 9349120
+    StopSample: 9380185
+    Layer: 0
+  - StartSample: 9371136
+    StopSample: 9402201
+    Layer: 0
+  - StartSample: 9390080
+    StopSample: 9421145
+    Layer: 0
+  - StartSample: 9412608
+    StopSample: 9443673
+    Layer: 0
+  - StartSample: 9506304
+    StopSample: 9537369
+    Layer: 0
+  - StartSample: 9530368
+    StopSample: 9561433
+    Layer: 0
+  - StartSample: 9549312
+    StopSample: 9580377
+    Layer: 0
+  - StartSample: 9571328
+    StopSample: 9602393
+    Layer: 0
+  - StartSample: 9591296
+    StopSample: 9622361
+    Layer: 0
+  - StartSample: 9612800
+    StopSample: 9643865
+    Layer: 0
   _startSample: 0
   _spline: {fileID: 267939568}
   _prePathSamples: 0
