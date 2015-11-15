@@ -1416,7 +1416,7 @@ MonoBehaviour:
   - StartSample: 198450
     StopSample: 242550
     Layer: 0
-  _startSample: 7800000
+  _startSample: 1066558
   _spline: {fileID: 267939568}
   _prePathSamples: 0
   _cheatAdvanceSamplesRange:
@@ -1426,15 +1426,15 @@ MonoBehaviour:
   - TimeSample: 0
     CurveFrac: 0
   - TimeSample: 1389600
-    CurveFrac: .107000001
-  - TimeSample: 1680000
-    CurveFrac: .150999993
-  - TimeSample: 1994880
-    CurveFrac: .192000002
-  - TimeSample: 2304000
-    CurveFrac: .252999991
-  - TimeSample: 3230400
-    CurveFrac: .328999996
+    CurveFrac: .169
+  - TimeSample: 1584000
+    CurveFrac: .218999997
+  - TimeSample: 1732799
+    CurveFrac: .25999999
+  - TimeSample: 1977600
+    CurveFrac: .280999988
+  - TimeSample: 2764799
+    CurveFrac: .363000005
   - TimeSample: 4722239
     CurveFrac: .465999991
   - TimeSample: 5173920
