@@ -38,3 +38,6 @@ Thumbs.db
 
 *.sublime-workspace
 *.sublime-project
+
+*.blend1
+*.blend1.meta
