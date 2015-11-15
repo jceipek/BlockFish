@@ -122,7 +122,9 @@ public class Path : MonoBehaviour {
     public void SetObstaclesToList (List<Obstacle> obstacles) {
         _obstacles = new Obstacle[obstacles.Count];
         for (int i = 0; i < obstacles.Count; i++) {
-            _obstacles[i] = obstacles[i];
+            var o = obstacles[i];
+            o.Layer = (GameLayer)(i%2);
+            _obstacles[i] = o;
         }
     }
 
