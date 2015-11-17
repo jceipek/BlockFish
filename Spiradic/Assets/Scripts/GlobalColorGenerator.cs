@@ -24,10 +24,19 @@ public class GlobalColorGenerator : MonoBehaviour {
     }
 
     public Color GetColor (GameLayer layer) {
+        if (_path == null) {
+            _path = FindObjectOfType<Path>();
+        }
         float sat = MathHelpers.LinMapFrom01(_saturationRange.Min, _saturationRange.Max, _saturationCurve.Evaluate(_path.CurrFraction));
         var color = HSBColor.FromColor(_startColors[(int)layer]);
         color.s = sat;
         return color.ToColor();
+    }
+
+    void Update () {
+        for (int i = 0; i < 2; i++) {
+            _mainMaterials[i].color = GetColor((GameLayer)i);
+        }
     }
 
     public Material GetMaterial (GameLayer layer) {
