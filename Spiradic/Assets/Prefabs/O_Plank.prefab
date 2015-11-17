@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 465706}
   - 114: {fileID: 11433842}
   m_Layer: 0
-  m_Name: O_Seaweed
+  m_Name: O_Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
