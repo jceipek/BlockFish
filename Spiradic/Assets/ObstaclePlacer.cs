@@ -12,10 +12,9 @@ public class ObstaclePlacer : MonoBehaviour {
     [SerializeField] float _incomingSeparation = 1f;
     [SerializeField] bool _flipFirst;
     [SerializeField] [Range(1,10)] int _flipEvery = 1;
-    [SerializeField] GameLayer _layer;
+    [SerializeField, TimeSample] int _sampleOffset = AudioConstants.SAMPLE_RATE;
     Path _path;
     [SerializeField] bool _placeMe;
-    [SerializeField] Material[] _materials;
 
 #if UNITY_EDITOR
     void OnValidate () {
@@ -31,11 +30,12 @@ public class ObstaclePlacer : MonoBehaviour {
                     Vector3 startPos;
                     if (Place(i, placementIndex, out anchor, out startPos)) {
                         var obj = PrefabUtility.InstantiatePrefab(_prefabToPlace) as GameObject;
+                        obj.transform.SetParent(transform, true);
                         obj.transform.position = startPos;
                         obj.transform.right = (startPos - anchor);
                         // obj.transform.rotation = Quaternion.FromToRotation(Vector3.forward, startPos - anchor);
                         var animator = obj.GetComponent<ObstacleAnimator>();
-                        animator.Initialize(i, _materials[(int)_layer]);
+                        animator.Initialize(i, _sampleOffset);
                         placementIndex++;
                     }
                 }
