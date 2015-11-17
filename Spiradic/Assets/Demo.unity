@@ -1200,6 +1200,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198084, guid: 98087609e8b2e4acfa53ce1037ea27d3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458112, guid: 98087609e8b2e4acfa53ce1037ea27d3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458112, guid: 98087609e8b2e4acfa53ce1037ea27d3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10.1999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 458112, guid: 98087609e8b2e4acfa53ce1037ea27d3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11435666, guid: 98087609e8b2e4acfa53ce1037ea27d3, type: 2}
+      propertyPath: _sampleOffset
+      value: 192000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11435666, guid: 98087609e8b2e4acfa53ce1037ea27d3, type: 2}
+      propertyPath: _smoothCount
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98087609e8b2e4acfa53ce1037ea27d3, type: 2}
   m_IsPrefabParent: 0
@@ -1599,7 +1623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!120 &267939571
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -5358,6 +5382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sampleOffset: 0
   _rotateToFollow: 0
+  _smoothCount: 1
 --- !u!1001 &753131105
 Prefab:
   m_ObjectHideFlags: 0
