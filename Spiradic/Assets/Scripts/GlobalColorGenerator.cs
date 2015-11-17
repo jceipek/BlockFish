@@ -2,17 +2,25 @@
 
 public class GlobalColorGenerator : MonoBehaviour {
 
-    public static GlobalColorGenerator G;
-
     [SerializeField] Color[] _startColors = new Color[2];
     [SerializeField] FMinMax _saturationRange = new FMinMax(0.1f, 1f);
     [SerializeField] AnimationCurve _saturationCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
     [SerializeField] Material[] _mainMaterials;
+    static Path _path;
 
-    Path _path;
-    void Awake () {
-        _path = FindObjectOfType<Path>();
-        G = this;
+
+    static GlobalColorGenerator _g;
+    public static GlobalColorGenerator G {
+        get {
+            if (_g == null) {
+                _path = FindObjectOfType<Path>();
+                _g = FindObjectOfType<GlobalColorGenerator>();
+            }
+            return _g;
+        }
+        protected set {
+            _g = value;
+        }
     }
 
     public Color GetColor (GameLayer layer) {

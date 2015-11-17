@@ -10,15 +10,19 @@ public class ObstacleAnimator : MonoBehaviour {
     [SerializeField, TimeSample] int _sampleOffset = AudioConstants.SAMPLE_RATE;
     [SerializeField, CurveRange] AnimationCurve _curve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
-    public void Initialize (int obstacleIndex, Material material) {
+    public void Initialize (int obstacleIndex, int sampleOffset) {
+        _sampleOffset = sampleOffset;
         _obstacleIndex = obstacleIndex;
+        _path = FindObjectOfType<Path>();
+        var obstacle = _path.ObstacleAtIndex(_obstacleIndex);
+        _renderer.sharedMaterial = GlobalColorGenerator.G.GetMaterial(obstacle.Layer);
 #if UNITY_EDITOR
-        _renderer.sharedMaterial = material;
         EditorUtility.SetDirty(gameObject);
 #endif
     }
 
     Vector3 _targetPos;
+    Vector3 _startPos;
     int _targetSample;
     Path _path;
 
@@ -26,6 +30,8 @@ public class ObstacleAnimator : MonoBehaviour {
         _path = FindObjectOfType<Path>();
         var obstacle = _path.ObstacleAtIndex(_obstacleIndex);
         _targetSample = obstacle.StartSample + (obstacle.StopSample - obstacle.StartSample)/2;
+        _renderer.sharedMaterial = GlobalColorGenerator.G.GetMaterial(obstacle.Layer);
+        _startPos = transform.position;
         _targetPos = _path.SplinePositionForSample(_targetSample);
     }
 
@@ -33,8 +39,7 @@ public class ObstacleAnimator : MonoBehaviour {
         int start = _targetSample - _sampleOffset;
         float frac = MathHelpers.LinMapTo01(start, _targetSample, _path.CurrentSample);
         if (frac >= 0f && frac <= 1f) {
-            Debug.Log(frac);
-            Vector3.Lerp(transform.position, _targetPos, _curve.Evaluate(frac));
+            transform.position = Vector3.Lerp(_startPos, _targetPos, _curve.Evaluate(frac));
         }
 	}
 }
