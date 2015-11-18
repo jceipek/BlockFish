@@ -9,13 +9,15 @@ public class ObstacleAnimator : MonoBehaviour {
     [SerializeField] Renderer _renderer;
     [SerializeField, TimeSample] int _sampleOffset = AudioConstants.SAMPLE_RATE;
     [SerializeField, CurveRange] AnimationCurve _curve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
+    [SerializeField] Material _mat;
 
     public void Initialize (int obstacleIndex, int sampleOffset) {
         _sampleOffset = sampleOffset;
         _obstacleIndex = obstacleIndex;
         _path = FindObjectOfType<Path>();
         var obstacle = _path.ObstacleAtIndex(_obstacleIndex);
-        _renderer.sharedMaterial = GlobalColorGenerator.G.GetMaterial(obstacle.Layer);
+        _renderer.sharedMaterial = _mat;
+        // _renderer.sharedMaterial = GlobalColorGenerator.G.GetMaterial(obstacle.Layer);
 #if UNITY_EDITOR
         EditorUtility.SetDirty(gameObject);
 #endif
@@ -30,7 +32,8 @@ public class ObstacleAnimator : MonoBehaviour {
         _path = FindObjectOfType<Path>();
         var obstacle = _path.ObstacleAtIndex(_obstacleIndex);
         _targetSample = obstacle.StartSample + (obstacle.StopSample - obstacle.StartSample)/2;
-        _renderer.sharedMaterial = GlobalColorGenerator.G.GetMaterial(obstacle.Layer);
+        // _renderer.sharedMaterial = GlobalColorGenerator.G.GetMaterial(obstacle.Layer);
+        _renderer.sharedMaterial = _mat;
         _startPos = transform.position;
         _targetPos = _path.SplinePositionForSample(_targetSample);
     }

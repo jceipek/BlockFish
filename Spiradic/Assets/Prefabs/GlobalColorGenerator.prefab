@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,25 +39,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11101532da7d048a3b8760cd32c04024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _colorsForTimes:
+  - TimeSample: 0
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
+  - TimeSample: 1536000
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
+  - TimeSample: 1680000
+    Color: {r: .741176486, g: .286274523, b: .196078435, a: 1}
+  - TimeSample: 2640000
+    Color: {r: .741176486, g: .286274523, b: .196078435, a: 1}
+  - TimeSample: 2784000
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
+  - TimeSample: 4464000
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
+  - TimeSample: 4656000
+    Color: {r: .741176486, g: .286274523, b: .196078435, a: 1}
+  - TimeSample: 6240000
+    Color: {r: .741176486, g: .286274523, b: .196078435, a: 1}
+  - TimeSample: 6398400
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
+  - TimeSample: 7872000
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
+  - TimeSample: 8064000
+    Color: {r: .741176486, g: .286274523, b: .196078435, a: 1}
+  - TimeSample: 9504000
+    Color: {r: .741176486, g: .286274523, b: .196078435, a: 1}
+  - TimeSample: 10080000
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
+  - TimeSample: 10598433
+    Color: {r: 0, g: .422413796, b: .720588207, a: 1}
   _startColors:
   - {r: 0, g: .422413796, b: .720588207, a: 1}
   - {r: .741176486, g: .286274523, b: .196078435, a: 1}
   _saturationRange:
-    Min: .100000001
+    Min: .300000012
     Max: 1
   _saturationCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 0
+      inSlope: 1
       outSlope: 1
-      tangentMode: 0
+      tangentMode: 10
     - time: 1
       value: 1
       inSlope: 1
-      outSlope: 0
-      tangentMode: 0
+      outSlope: 1
+      tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   _mainMaterials:
@@ -69,7 +98,119 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[2].TimeSample
+      value: 1680000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[1].TimeSample
+      value: 1536000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[3].TimeSample
+      value: 2640000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[4].TimeSample
+      value: 2784000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[5].TimeSample
+      value: 4464000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[5].Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[5].Color.g
+      value: .422413796
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[5].Color.b
+      value: .720588207
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[6].TimeSample
+      value: 4656000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[6].Color.r
+      value: .741176486
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[6].Color.g
+      value: .286274523
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[6].Color.b
+      value: .196078435
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[7].TimeSample
+      value: 6240000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[7].Color.r
+      value: .741176486
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[7].Color.g
+      value: .286274523
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[7].Color.b
+      value: .196078435
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[8].TimeSample
+      value: 6398400
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[9].TimeSample
+      value: 7872000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[10].TimeSample
+      value: 8064000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[10].Color.r
+      value: .741176486
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[10].Color.g
+      value: .286274523
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[10].Color.b
+      value: .196078435
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[11].TimeSample
+      value: 9504000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[12].TimeSample
+      value: 9648000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[11].Color.r
+      value: .741176486
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[11].Color.g
+      value: .286274523
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _colorsForTimes.Array.data[11].Color.b
+      value: .196078435
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189948}

@@ -136,6 +136,7 @@ MonoBehaviour:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+  _mat: {fileID: 2100000, guid: 6c5ca23ea4e6448d19f78bd573d14026, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -147,6 +148,10 @@ Prefab:
       propertyPath: _renderer
       value: 
       objectReference: {fileID: 2391528}
+    - target: {fileID: 0}
+      propertyPath: _mat
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c5ca23ea4e6448d19f78bd573d14026, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139634}
