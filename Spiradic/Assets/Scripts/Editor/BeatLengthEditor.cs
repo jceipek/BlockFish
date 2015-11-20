@@ -6,7 +6,6 @@ using System.Collections;
 public class BeatLengthEditor : Editor {
 
     void OnSceneGUI () {
-        Tools.hidden = true;
         var path = target as Path;
         var obstacles = serializedObject.FindProperty("_obstacles");
         for (int i = obstacles.arraySize - 1; i >= 0; i--) {

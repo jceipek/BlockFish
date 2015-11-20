@@ -97,6 +97,12 @@ public class Path : MonoBehaviour {
         }
     }
 
+    public float TotalSamples {
+        get {
+            return (float)_audioSource.clip.samples;
+        }
+    }
+
     public float FracForSample (int sample, bool logme = false) {
         float frac = (sample+_prePathSamples)/(float)(_audioSource.clip.samples+_prePathSamples);
         for (int i = 0; i < _timeMap.Length-1; i++) {
