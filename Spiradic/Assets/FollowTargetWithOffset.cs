@@ -42,11 +42,19 @@ public class FollowTargetWithOffset : MonoBehaviour {
         transform.position = _target.position - (Quaternion.Euler(0f,info.AngleOffset,0f)*_target.forward) * info.Separation;
 
         Vector2 delta = _target.position-transform.position;
-        Vector2 currSample = Vector2.zero;
-        // var currSample = (Vector2)(_target.position-transform.position).normalized;
-        _sampleDirectionMovingAverageTimesN = _sampleDirectionMovingAverageTimesN + currSample - _sampleDirectionMovingAverageTimesN/_smoothCount;
+        Vector2 currSample = delta.normalized;
+        // var currSample = delta.normalized;
+        // _sampleDirectionMovingAverageTimesN = _sampleDirectionMovingAverageTimesN + currSample - _sampleDirectionMovingAverageTimesN/_smoothCount;
 
+        transform.rotation = Quaternion.FromToRotation(Vector3.forward, delta.normalized);
         // transform.rotation = Quaternion.FromToRotation(Vector3.up, _sampleDirectionMovingAverageTimesN/_smoothCount);
         // transform.right = _sampleDirectionMovingAverageTimesN/_smoothCount;
 	}
+
+    void OnDrawGizmos () {
+        Gizmos.color = Color.green;
+        for (int i = 0; i < _followInfos.Length; i++) {
+            Gizmos.DrawLine(_path.SplinePositionForSample(_followInfos[i].TimeSample), transform.position + Vector3.right * _followInfos[i].TimeSample/(float)AudioConstants.SAMPLE_RATE);
+        }
+    }
 }
