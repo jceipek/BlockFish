@@ -37,16 +37,20 @@ public class FollowTargetWithOffset : MonoBehaviour {
         return new FollowInfo(sample, sep, angleOffset);
     }
 
+    [SerializeField] float _DEBUG_SEP;
+    [SerializeField] float _DEBUG_OFFSET;
 	void LateUpdate () {
         var info = FollowInfoForSample(_path.CurrentSample);
+        _DEBUG_SEP = info.Separation;
+        _DEBUG_OFFSET = info.AngleOffset;
         transform.position = _target.position - (Quaternion.Euler(0f,info.AngleOffset,0f)*_target.forward) * info.Separation;
 
         Vector2 delta = _target.position-transform.position;
-        Vector2 currSample = delta.normalized;
+        Vector2 currSample = (delta.sqrMagnitude > 0.01f)? delta.normalized : Vector2.zero;
         // var currSample = delta.normalized;
         // _sampleDirectionMovingAverageTimesN = _sampleDirectionMovingAverageTimesN + currSample - _sampleDirectionMovingAverageTimesN/_smoothCount;
 
-        transform.rotation = Quaternion.FromToRotation(Vector3.forward, delta.normalized);
+        transform.rotation = Quaternion.LookRotation(delta.normalized, Vector3.up);
         // transform.rotation = Quaternion.FromToRotation(Vector3.up, _sampleDirectionMovingAverageTimesN/_smoothCount);
         // transform.right = _sampleDirectionMovingAverageTimesN/_smoothCount;
 	}
@@ -54,7 +58,9 @@ public class FollowTargetWithOffset : MonoBehaviour {
     void OnDrawGizmos () {
         Gizmos.color = Color.green;
         for (int i = 0; i < _followInfos.Length; i++) {
-            Gizmos.DrawLine(_path.SplinePositionForSample(_followInfos[i].TimeSample), transform.position + Vector3.right * _followInfos[i].TimeSample/(float)AudioConstants.SAMPLE_RATE);
+            Gizmos.DrawLine(_path.SplinePositionForSample(_followInfos[i].TimeSample),
+                            transform.position + Vector3.right * _followInfos[i].TimeSample/(float)AudioConstants.SAMPLE_RATE);
+            // Gizmos.DrawLine(_path.SplinePositionForSample(_followInfos[i].TimeSample), );
         }
     }
 }
