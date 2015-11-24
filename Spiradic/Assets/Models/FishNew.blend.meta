@@ -1,43 +1,29 @@
 fileFormatVersion: 2
-guid: 0c98239cc4bd5470097eb889747a7828
-timeCreated: 1447552408
-licenseType: Free
+guid: 2eaf6364349a84f58a040b791037556f
+timeCreated: 1448337060
+licenseType: Pro
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Armature
-    100004: Bone
-    100006: Bone_001
-    100008: Bone_002
-    100010: Bone_003
-    100012: Circle
-    100014: Base
-    100016: FlipperDown
-    100018: FlipperUp
-    100020: Tail1
-    100022: Tail2
-    400000: //RootNode
-    400002: Armature
-    400004: Bone
-    400006: Bone_001
-    400008: Bone_002
-    400010: Bone_003
-    400012: Circle
-    400014: Base
-    400016: FlipperDown
-    400018: FlipperUp
-    400020: Tail1
-    400022: Tail2
-    2300000: //RootNode
-    2300002: Circle
-    3300000: //RootNode
-    3300002: Circle
+    100000: Armature
+    100002: Base
+    100004: Circle
+    100006: //RootNode
+    100008: FlipperDown
+    100010: FlipperUp
+    100012: Tail1
+    100014: Tail2
+    400000: Armature
+    400002: Base
+    400004: Circle
+    400006: //RootNode
+    400008: FlipperDown
+    400010: FlipperUp
+    400012: Tail1
+    400014: Tail2
     4300000: Circle
     7400000: Default Take
-    7400002: Swim
-    7400004: ArmatureAction
-    7400006: Swimming
+    7400002: Swimming
     9500000: //RootNode
     13700000: Circle
   materials:
@@ -53,7 +39,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -63,46 +49,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Default Take
       takeName: Default Take
-      firstFrame: 0
-      lastFrame: 9
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Bone
-        weight: 1
-      - path: Armature/Bone/Bone_001
-        weight: 1
-      - path: Armature/Bone/Bone_002
-        weight: 1
-      - path: Armature/Bone_003
-        weight: 1
-      - path: Circle
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Swim
-      takeName: ArmatureAction
       firstFrame: 0
       lastFrame: 9
       wrapMode: 0
@@ -128,13 +74,57 @@ ModelImporter:
         weight: 1
       - path: Armature
         weight: 1
-      - path: Armature/Bone
+      - path: Armature/Base
         weight: 1
-      - path: Armature/Bone/Bone_001
+      - path: Armature/Base/Tail1
         weight: 1
-      - path: Armature/Bone/Bone_002
+      - path: Armature/Base/Tail2
         weight: 1
-      - path: Armature/Bone_003
+      - path: Armature/FlipperDown
+        weight: 1
+      - path: Armature/FlipperUp
+        weight: 1
+      - path: Circle
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Swimming
+      takeName: Swimming
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Base
+        weight: 1
+      - path: Armature/Base/Tail1
+        weight: 1
+      - path: Armature/Base/Tail2
+        weight: 1
+      - path: Armature/FlipperDown
+        weight: 1
+      - path: Armature/FlipperUp
         weight: 1
       - path: Circle
         weight: 1
@@ -175,7 +165,7 @@ ModelImporter:
     armStretch: .0500000007
     legStretch: .0500000007
     feetSpacing: 0
-    rootMotionBoneName: Base
+    rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
