@@ -21,7 +21,7 @@ public class FollowTargetWithOffset : MonoBehaviour {
     [SerializeField] FollowInfo[] _followInfos;
 
     [SerializeField] int _smoothCount = 120;
-    Vector2 _sampleDirectionMovingAverageTimesN;
+    Vector2 _sampleDirectionMovingAverageTimesN = new Vector2(1,0);
 
     FollowInfo FollowInfoForSample (int sample) {
         float sep = 0f;
@@ -43,14 +43,17 @@ public class FollowTargetWithOffset : MonoBehaviour {
         var info = FollowInfoForSample(_path.CurrentSample);
         _DEBUG_SEP = info.Separation;
         _DEBUG_OFFSET = info.AngleOffset;
-        transform.position = _target.position - (Quaternion.Euler(0f,info.AngleOffset,0f)*_target.forward) * info.Separation;
+        // transform.position = _target.position - (Quaternion.Euler(0f,0f,info.AngleOffset)*_target.forward) * info.Separation;
+        transform.position = _target.position - (Quaternion.Euler(0f,info.AngleOffset,0f) * _target.forward) * info.Separation;
 
         Vector2 delta = _target.position-transform.position;
-        Vector2 currSample = (delta.sqrMagnitude > 0.01f)? delta.normalized : Vector2.zero;
+        Vector2 currSample = (delta.sqrMagnitude > 0.01f)? delta.normalized : new Vector2(1,0);
+        // Debug.Log(delta.normalized);
         // var currSample = delta.normalized;
-        // _sampleDirectionMovingAverageTimesN = _sampleDirectionMovingAverageTimesN + currSample - _sampleDirectionMovingAverageTimesN/_smoothCount;
+        _sampleDirectionMovingAverageTimesN = _sampleDirectionMovingAverageTimesN + currSample - (_sampleDirectionMovingAverageTimesN/_smoothCount);
 
-        transform.rotation = Quaternion.LookRotation(delta.normalized, Vector3.up);
+        transform.rotation = Quaternion.LookRotation((_sampleDirectionMovingAverageTimesN/_smoothCount).normalized, Vector3.up);
+        // Debug.Log((_sampleDirectionMovingAverageTimesN/_smoothCount).normalized);
         // transform.rotation = Quaternion.FromToRotation(Vector3.up, _sampleDirectionMovingAverageTimesN/_smoothCount);
         // transform.right = _sampleDirectionMovingAverageTimesN/_smoothCount;
 	}
